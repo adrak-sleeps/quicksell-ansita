@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './card';
+import '../App.css';
 
 const GenColumn = (props) => {
-    console.log("Hey")
     console.log(props.category)
     const priorityMap= ['No priority', 'Urgent', 'High', 'Medium', 'Low'];
     const userMap = Object.assign({}, ...props.data.users.map(user => ({[user.id] : user.name})))
@@ -15,7 +15,7 @@ const GenColumn = (props) => {
     }
     return (
         <div >
-            <div > {props.category}</div>
+            <div className='App-header'> {props.category}</div>
             <div>
                 {props.data.tickets.filter(
                     ticket =>check(ticket, props))

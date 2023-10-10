@@ -4,6 +4,7 @@ import Card from "./Components/card";
 import "./Components/card.css";
 import GenTickets from "./Components/genTickets";
 import Dropdown from "./Components/dropdown";
+import './Components/dropdown.css';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <div className="App-header">
+      <div className="dropdown-container">
         Grouping:
         <Dropdown
           value={grouping}
