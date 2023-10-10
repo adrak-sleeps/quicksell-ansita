@@ -1,0 +1,26 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+  }
+  
+  .card-header {
+    background-color: white;
+    padding: 8px;
+    font-size: 10px;
+    /* text-align: center; */
+    /* border-bottom: 1px solid #ccc; */
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+
+  .card-tags{
+    padding: 8px;
+    font-size: 12px;
+  }
+  
