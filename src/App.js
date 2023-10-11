@@ -1,13 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Card from "./Components/card";
 import "./Components/card.css";
 import GenTickets from "./Components/genTickets";
-import Dropdown from "./Components/dropdown";
 import './Components/dropdown.css';
+import Form from "./Components/form";
+import './App.css';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [form, setForm] = useState(false);
   const [grouping, setGrouping] = useState("Status");
   const [ordering, setOrdering] = useState("Priority");
 
@@ -32,21 +33,15 @@ const App = () => {
 
   return (
     <>
-      <div className="dropdown-container">
-        Grouping:
-        <Dropdown
-          value={grouping}
-          setValue={setGrouping}
-          option={groupingOptions}
-        ></Dropdown>
-        Ordering: 
-        <Dropdown
-          value={ordering}
-          setValue={setOrdering}
-          option={orderingOptions}
-        ></Dropdown>
-      </div>
+      <div className="page-body">
+      <Form form = {form} setForm = {setForm} 
+        grouping = {grouping} setGrouping = {setGrouping} 
+        groupingOptions = {groupingOptions}
+        ordering = {ordering} setOrdering = {setOrdering}
+        orderingOptions = {orderingOptions}
+      ></Form>
       <GenTickets ordering={ordering} grouping={grouping} data={data} />
+      </div>
     </>
   );
 };

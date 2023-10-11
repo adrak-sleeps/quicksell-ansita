@@ -1,17 +1,21 @@
 import React from 'react';
+import imageContent from '../Images/person.jpg';
+import tagImage from '../Images/tagIcon.png';
 
 const Card = (props) => {
     console.log(props)
     return (
       <div className="card flex-item">
-        <div className="card-header">
-          <h2>{props.title}</h2>
+        <div className="card-header flex-parent">
+          <h2 className='flex-child'>{props.title}</h2> 
+          <img className = "card-profile-image flex-child" src = {imageContent} alt = "hehe"/>
         </div>
         <div className="card-content">
-          <p>{props.content}</p>
+          <div>{props.content}</div>
         </div>
-        <div className='card-tags'>
-          <p>{props.tags}</p>
+        <div className='flex-parent card-tags'>
+          <img className = "card-tag-image flex-child" src = {tagImage}></img>
+          <div className='flex-child tags'>{props.tags}</div>
         </div>
       </div>
     );

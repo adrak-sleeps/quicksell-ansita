@@ -1,14 +1,80 @@
-.dropdown-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    margin: 20px;
-  }
-  
-  .dropdown {
-    position: relative;
-    width: 100%;
-  }
+.page-header {
+  background-color: white;
+}
 
-  
+.dropdown-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0px 0px 0px 10px;
+  z-index: 1;
+  position: absolute;
+}
+
+.dropdown {
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  margin: 10px;
+}
+
+.dropdown-name {
+  padding: 0px;
+  display: inline-block;
+  /* float: right; */
+  position: relative;
+  margin: 10px 0 10px 100px;
+}
+
+form {
+  display: inline;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+select::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+button {
+  margin: 10px 5px 5px 10px;
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-image {
+  width: 15px;
+  height: 15px;
+  margin: 0px 5px 0px 0px;
+  border-radius: 20px;
+}

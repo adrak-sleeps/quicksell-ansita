@@ -8,7 +8,8 @@ const Dropdown = (props) => {
 
   return (
     <div className="dropdown">
-      <form>
+      {props.name}
+      <form className="dropdown-name">
         <select value={props.value} onChange={handleChange}>
           {props.option.map((value) => (
             <option value={value} key={value}>
@@ -16,7 +17,7 @@ const Dropdown = (props) => {
             </option>
           ))}
         </select>
-      </form>   
+      </form>  
     </div>
   );
 };
